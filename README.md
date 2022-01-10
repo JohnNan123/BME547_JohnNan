@@ -6,3 +6,6 @@ This is the repository for BME 547 class.
 
 I will so some health database in this couse. 
 
+* patient 
+* birthday 
+* 
