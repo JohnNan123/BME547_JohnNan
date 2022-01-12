@@ -7,6 +7,8 @@ def interface():
         choice = input("Enter your choice: ")
         if choice == '9': 
             keep_running = False
+        elif choice == '1': 
+            HDL_driver()
     return 
 
 def accept_input(test_name): 
@@ -21,7 +23,7 @@ def print_result(test_name, test_vaule, test_class):
 def check_HDL(HDL_value): 
     if HDL_value >= 60: 
         answer = 'Normal'
-    elif HDL_value >= 40 && < 60: 
+    elif HDL_value >= 40 and HDL_value < 60: 
         answer = 'Borderline Low'
     else: 
         answer = 'Low'
@@ -32,7 +34,7 @@ def HDL_driver():
     classification = check_HDL(HDL_value)
     print_result("HDL", HDL_value, classification)
 
-    
+
 
 
 
