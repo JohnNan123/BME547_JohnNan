@@ -1,9 +1,13 @@
+from inspect import classify_class_attrs
+from re import L
+
+
 def interface():
     print('Blood Teat Analysis')
     keep_running = True
     while keep_running: 
         print('Options: ')
-        print('''1-HDL_driver \n9-Quit''')
+        print('1-HDL \n2-LDL \n9-Quit')
         choice = input("Enter your choice: ")
         if choice == '9': 
             keep_running = False
@@ -36,8 +40,21 @@ def HDL_driver():
     classification = check_HDL(HDL_value)
     print_result("HDL", HDL_value, classification)
 
+def check_LDL(LDL_value): 
+    if LDL_value < 130: 
+        answer = 'Normal'
+    elif LDL_value < 159 and LDL_value >= 130: 
+        answer = 'Broadline High'
+    elif LDL_value < 189 and LDL_value >= 160: 
+        answer = 'High'
+    else: 
+        answer = 'Very High'
+    return answer
 
-
+def LDL_driver(): 
+    LDL_value = accept_input("LDL")
+    classification = check_LDL(LDL_value)
+    print_result("LDL", LDL_value, classification)
 
 
 interface()
