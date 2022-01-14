@@ -1,3 +1,7 @@
+from inspect import classify_class_attrs
+from multiprocessing.connection import answer_challenge
+
+
 def interface():
     print('Blood Teat Analysis')
     keep_running = True
@@ -34,9 +38,17 @@ def HDL_driver():
     classification = check_HDL(HDL_value)
     print_result("HDL", HDL_value, classification)
 
+def check_Cholesterol(Cholesterol_value): 
+    if Cholesterol_value < 200:
+        answer = 'Normal'
+    elif Cholesterol_value >= 200 and Cholesterol_value <= 239: 
+        answer = 'Borderline High'
+    else: 
+        answer = 'High'
 
+def Cholesterol_driver(): 
+    Cholesterol_value = accept_input("Cholesterol")
+    classification = check_Cholesterol(Cholesterol_value)
+    print_result("Cholesterol", Cholesterol_value, classification)
 
-
-
-interface()
 
