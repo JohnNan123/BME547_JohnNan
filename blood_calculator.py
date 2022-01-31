@@ -74,5 +74,6 @@ def Cholesterol_driver():
     Cholesterol_value = accept_input("Cholesterol")
     classification = check_Cholesterol(Cholesterol_value)
     print_result("Cholesterol", Cholesterol_value, classification)
-
+    
 interface()
+
