@@ -1,6 +1,9 @@
 from inspect import classify_class_attrs
 from multiprocessing.connection import answer_challenge
 
+from inspect import classify_class_attrs
+from multiprocessing.connection import answer_challenge
+
 
 def interface():
     print('Blood Teat Analysis')
@@ -71,5 +74,6 @@ def Cholesterol_driver():
     Cholesterol_value = accept_input("Cholesterol")
     classification = check_Cholesterol(Cholesterol_value)
     print_result("Cholesterol", Cholesterol_value, classification)
-
+    
 interface()
+
