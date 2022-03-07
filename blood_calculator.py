@@ -75,4 +75,5 @@ def Cholesterol_driver():
     classification = check_Cholesterol(Cholesterol_value)
     print_result("Cholesterol", Cholesterol_value, classification)
 
-interface()
+if __name__ == "__main__":
+    interface()
